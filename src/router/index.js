@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import NotFoundView from '../views/NotFoundView.vue'
 import GetStarted from '../views/GetStarted/GetStartedView.vue'
+import OptionsView from '../views/GetStarted/OptionsView.vue'
 import ModuleView from '../views/GetStarted/ModuleView.vue'
 
 
@@ -27,6 +28,12 @@ const routes = [
   },
   {
     path: '/GetStarted/:link',
+    name: 'OptionsView',
+    component: OptionsView,    
+    props: true
+  },
+  {
+    path: '/GetStarted/:id',
     name: 'ModuleView',
     component: ModuleView,    
     props: true
